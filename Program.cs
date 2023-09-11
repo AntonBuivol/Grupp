@@ -38,7 +38,7 @@ namespace Grupp_ja_liikmed
             int count = Convert.ToInt32(Console.ReadLine());
 
             Group grname = new Group(count);
-            Liik lik = new Liik("",0);
+            Liik lik = new Liik("","",0);
             while (true)
                 {
                 Console.WriteLine("Mida te tahete:\n1) Create Liik\n2) Kõige vanem\n3) Kõige noorem\n4) Show info\n5) Exit");

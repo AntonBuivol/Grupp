@@ -27,7 +27,7 @@ namespace Grupp_ja_liikmed
         {
             Console.ForegroundColor = ConsoleColor.White;
 
-            if (Members.Any(m => m.Name == member.Name && m.Age == member.Age))
+            if (Members.Any(m => m.Name == member.Name && m.Lastname == member.Lastname && m.Age == member.Age))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("See inimene on juba olemas");
@@ -62,7 +62,7 @@ namespace Grupp_ja_liikmed
         {
             foreach (Liik item in Members)
             {
-                Console.Write(item.Name + ": " + item.Age + " aastad" + "; ");
+                Console.Write(item.Name + " " + item.Lastname + ": " + item.Age + " aastad" + "; ");
             }
             
         }
@@ -79,7 +79,7 @@ namespace Grupp_ja_liikmed
 
         public void Oldest()
         {
-            Liik m = new Liik("",0);
+            Liik m = new Liik("","",0);
             foreach (Liik item in Members)
             {
                 if(item.Age > m.Age)
@@ -87,19 +87,19 @@ namespace Grupp_ja_liikmed
                     m = item;
                 }
             }
-            Console.WriteLine("Vanem: " + m.Name + ": " + m.Age + " aastad");
+            Console.WriteLine("Vanem: " + m.Name + " " + m.Lastname + ": " + m.Age + " aastad");
             Console.WriteLine();
-
         }
+
         public void Youngest()
         {
-            Liik m = new Liik("", 1000);
+            Liik m = new Liik("", "", 1000);
             foreach (Liik item in Members)
             {
                 if (item.Age < m.Age)
                     m = item;
             }
-            Console.WriteLine("Noorem: " + m.Name + ": " + m.Age + " aastad");
+            Console.WriteLine("Noorem: " + m.Name + " " + m.Lastname + ": " + m.Age + " aastad");
             Console.WriteLine();
         }
 
