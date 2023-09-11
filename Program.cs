@@ -77,6 +77,11 @@ namespace Grupp_ja_liikmed
                     case '5':
                         Environment.Exit(0);
                         break;
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Vale valik!");
+                        break;
                 }
             }
         }
