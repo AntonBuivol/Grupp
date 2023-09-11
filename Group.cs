@@ -35,10 +35,10 @@ namespace Grupp_ja_liikmed
                 return false;
             }
 
-            if(Members.Contains(member))
+            if (member.Age<1 || member.Age>100)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("See inimene on juba olemas");
+                Console.WriteLine("Selline vanus on võimatu.");
                 Console.ForegroundColor = ConsoleColor.White;
                 return false;
             }
@@ -87,8 +87,20 @@ namespace Grupp_ja_liikmed
                     m = item;
                 }
             }
-            Console.WriteLine("Oldest: " + m.Name + ": " + m.Age + "aastad");
-            
+            Console.WriteLine("Vanem: " + m.Name + ": " + m.Age + " aastad");
+            Console.WriteLine();
+
+        }
+        public void Youngest()
+        {
+            Liik m = new Liik("", 1000);
+            foreach (Liik item in Members)
+            {
+                if (item.Age < m.Age)
+                    m = item;
+            }
+            Console.WriteLine("Noorem: " + m.Name + ": " + m.Age + " aastad");
+            Console.WriteLine();
         }
 
     }

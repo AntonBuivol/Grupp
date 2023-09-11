@@ -38,10 +38,5 @@ namespace Grupp_ja_liikmed
             Console.WriteLine("Nimi: {0}\n Vanus: {1}", Name, Age);
         }
 
-    public void Youngest()
-        {
-
-        }
-
     }
 }

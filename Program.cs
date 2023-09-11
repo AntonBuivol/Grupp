@@ -66,6 +66,7 @@ namespace Grupp_ja_liikmed
                 switch (vali.KeyChar)
                 {
                     case '3':
+                        grname.Youngest();
                         break;
                 }
                 switch (vali.KeyChar)
