@@ -56,21 +56,15 @@ namespace Grupp_ja_liikmed
                             Console.WriteLine();
                         }
                         break;
-                }
-                switch (vali.KeyChar)
-                {
+                        
                     case '2':
                         grname.Oldest();
                         break;
-                }
-                switch (vali.KeyChar)
-                {
+                
                     case '3':
                         grname.Youngest();
                         break;
-                }
-                switch (vali.KeyChar)
-                {
+                
                     case '4':
                         Console.WriteLine();
                         Console.WriteLine("Inimesed:");
@@ -79,9 +73,7 @@ namespace Grupp_ja_liikmed
                         Console.WriteLine("Inimeste arv: " + grname.GetMembersCount());
                         Console.ReadLine();
                         break;
-                }
-                switch (vali.KeyChar)
-                {
+                
                     case '5':
                         Environment.Exit(0);
                         break;
